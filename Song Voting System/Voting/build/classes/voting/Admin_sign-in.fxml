@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voting.Admin_login">
+   <children>
+      <ImageView fitHeight="425.0" fitWidth="648.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/login-bg.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="185.0" layoutY="83.0" prefHeight="260.0" prefWidth="260.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <TextField id="usernameID" fx:id="userName" layoutX="16.0" layoutY="93.0" prefHeight="37.0" prefWidth="229.0" promptText="Username">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Button id="btnSign" fx:id="signin" alignment="CENTER" layoutX="97.0" layoutY="215.0" mnemonicParsing="false" onAction="#validate" prefHeight="31.0" prefWidth="68.0" text="login">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <PasswordField id="passwordID" fx:id="password" layoutX="16.0" layoutY="145.0" prefHeight="37.0" prefWidth="229.0" promptText="Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </PasswordField>
+            <Label fx:id="messege" layoutX="69.0" layoutY="190.0" style="-fx-background-color: red;" text="Wrong" visible="false">
+               <font>
+                  <Font name="Source Code Pro" size="12.0" />
+               </font></Label>
+            <Text layoutX="52.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin login" wrappingWidth="199.13671875">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <Button layoutX="97.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToWelcomePage" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIcon glyphName="ARROW_LEFT" size="20" wrappingWidth="25.785714149475098">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Button layoutX="615.0" layoutY="8.0" mnemonicParsing="false" onAction="#exit" style="-fx-cursor: hand;">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fx:id="close" fill="#04006f" glyphName="CLOSE" size="15" />
+         </graphic>
+      </Button>
+   </children>
+</Pane>

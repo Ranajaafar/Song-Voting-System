@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="648.0" styleClass="a" stylesheets="@css/stylesheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voting.ReviewController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="29.0" prefWidth="648.0" style="-fx-background-color: #541038;" styleClass="#c34b93 c91bac">
+         <children>
+            <Button layoutX="615.0" layoutY="4.0" mnemonicParsing="false" onAction="#exit" style="-fx-cursor: hand;">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fx:id="close" fill="#04006f" glyphName="CLOSE" size="15" />
+               </graphic>
+            </Button>
+            <Button fx:id="logoutBtn" alignment="CENTER" contentDisplay="RIGHT" layoutX="14.0" layoutY="3.5" mnemonicParsing="false" onAction="#onLogoutClick" prefHeight="6.0" prefWidth="92.0" style="-fx-background-color: #A3BAC3; -fx-font-size: 10; -fx-text-fill: white; -fx-background-radius: 5;" text="Log out">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutY="30.0" prefHeight="50.0" prefWidth="648.0" style="-fx-background-color: white;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="648.0" spacing="2.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#Vote" prefHeight="50.0" prefWidth="113.0" style="-fx-background-color: transparent;" text="Vote">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIcon fill="#d3c4c4" glyphName="HOME" size="40" />
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Result" prefHeight="50.0" prefWidth="113.0" style="-fx-background-color: transparent;" text="Result">
+                     <graphic>
+                        <FontAwesomeIcon fill="#d3c4c4" glyphName="LINE_CHART" size="30" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="113.0" style="-fx-background-color: transparent; -fx-border-color: #666666; -fx-border-width: 0px 0px 3px 0px;" text="Review">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="STAR" size="30" />
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane layoutY="78.0" prefHeight="356.0" prefWidth="648.0">
+         <children>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="324.0" prefWidth="251.0">
+               <children>
+                  <Label layoutX="46.0" layoutY="8.0" prefHeight="72.0" prefWidth="159.0" text="Rating">
+                     <font>
+                        <Font name="System Bold Italic" size="48.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="0.7686274647712708" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color red="1.0" green="0.7686274647712708" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color red="0.21176470816135406" green="0.21176470816135406" blue="0.21176470816135406" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.7882353067398071" green="0.10588235408067703" blue="0.6745098233222961" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="79.0" prefHeight="126.0" prefWidth="234.0" spacing="10.0" style="-fx-background-color: #808080;">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="59.0" prefWidth="234.0" spacing="3.0">
+                           <children>
+                              <FontAwesomeIcon fx:id="nb1" fill="WHITE" glyphName="STAR" size="40">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </FontAwesomeIcon>
+                              <FontAwesomeIcon fx:id="nb2" fill="WHITE" glyphName="STAR" size="40">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </FontAwesomeIcon>
+                              <FontAwesomeIcon fx:id="nb3" fill="WHITE" glyphName="STAR" size="40">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </FontAwesomeIcon>
+                              <FontAwesomeIcon fx:id="nb4" fill="WHITE" glyphName="STAR" size="40" wrappingWidth="41.14285659790039">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </FontAwesomeIcon>
+                              <FontAwesomeIcon fx:id="nb5" fill="WHITE" glyphName="STAR" size="40">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </FontAwesomeIcon>
+                           </children>
+                        </HBox>
+                        <Button fx:id="post" mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" style="-fx-background-color: #541038;" text="Post" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <VBox layoutX="296.0" layoutY="14.0" prefHeight="324.0" prefWidth="352.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="352.0" spacing="9.0">
+                     <children>
+                        <Label text="5 star" />
+                        <ProgressBar fx:id="pg5" prefWidth="200.0" progress="0.5" />
+                        <Label fx:id="label5" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="352.0" spacing="9.0">
+                     <children>
+                        <Label text="4 star" />
+                        <ProgressBar fx:id="pg4" prefWidth="200.0" progress="0.5" />
+                        <Label fx:id="label4" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="352.0" spacing="9.0">
+                     <children>
+                        <Label text="3 star" />
+                        <ProgressBar fx:id="pg3" prefWidth="200.0" progress="0.5" />
+                        <Label fx:id="label3" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="352.0" spacing="9.0">
+                     <children>
+                        <Label text="2 star" />
+                        <ProgressBar fx:id="pg2" prefWidth="200.0" progress="0.5" />
+                        <Label fx:id="label2" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="352.0" spacing="9.0">
+                     <children>
+                        <Label text="1 star" />
+                        <ProgressBar fx:id="pg1" prefWidth="200.0" progress="0.5" />
+                        <Label fx:id="label1" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!--
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voting.FXMLDocumentController" >
+   <children>
+      <TableView fx:id="table" layoutX="14.0" prefHeight="400.0" prefWidth="710.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="86.0" text="ID" />
+          <TableColumn fx:id="name" prefWidth="103.0" text="Name" />
+            <TableColumn fx:id="lname" prefWidth="75.0" text="Last Name" />
+            <TableColumn prefWidth="174.0" text="Email">
+               <columns>
+                  <TableColumn fx:id="gmail" prefWidth="75.0" text="gmail" />
+                  <TableColumn fx:id="yahoo" prefWidth="75.0" text="yahoo" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="phone" prefWidth="144.0" text="phone" />
+            <TableColumn fx:id="country" prefWidth="109.0" text="Country" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>   -->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voting.SongController">
+   <children>
+      <TableView fx:id="table" layoutX="241.0" layoutY="107.0" prefHeight="277.0" prefWidth="377.0" style="-fx-background-background: #ffff00;">
+        <columns>
+          <TableColumn fx:id="id" maxWidth="-Infinity" minWidth="50.0" prefWidth="75.0" style="-fx-alignment: center;" text="id" />
+          <TableColumn fx:id="name" maxWidth="1.7976931348623157E308" prefWidth="75.0" style="-fx-alignment: center;" text="name" />
+            <TableColumn fx:id="genre_name" maxWidth="1.7976931348623157E308" prefWidth="75.0" style="-fx-alignment: center;" text="genre_name" />
+            <TableColumn fx:id="type_name" maxWidth="1.7976931348623157E308" prefWidth="75.0" style="-fx-alignment: center;" text="type_name" />
+            <TableColumn fx:id="Photo" maxWidth="-Infinity" minWidth="50.0" prefWidth="75.0" style="-fx-alignment: center;" text="Photo" />
+            <TableColumn fx:id="action" maxWidth="-Infinity" minWidth="50.0" prefWidth="75.0" style="-fx-alignment: center;" text="action" />
+        </columns>
+      </TableView>
+      <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="99.0" prefHeight="190.0" prefWidth="211.0" spacing="10.0">
+         <children>
+            <TextField fx:id="name_song" promptText="name" />
+            <ComboBox fx:id="comb" prefWidth="210.0" promptText="genre_name" />
+            <ComboBox fx:id="comb1" prefWidth="210.0" promptText="type_name" />
+            <ImageView fx:id="image" fitHeight="87.0" fitWidth="212.0" pickOnBounds="true" preserveRatio="true" />
+            <Button mnemonicParsing="false" onAction="#upload" text="upload photo">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="message" style="-fx-background-color: red;" text="Upload photo" visible="false">
+               <font>
+                  <Font name="Source Code Pro" size="12.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#add_song" prefWidth="100.0" style="-fx-background-color: #006989; -fx-background-radius: 10;" text="Add" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+      <Button layoutX="615.0" layoutY="8.0" mnemonicParsing="false" onAction="#exit" style="-fx-cursor: hand;">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fx:id="close" fill="#04006f" glyphName="CLOSE" size="15" />
+         </graphic>
+      </Button>
+      <Text fill="#04006f" layoutX="349.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Song Table">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#04006f" layoutX="58.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Song">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="logoutBtn" alignment="CENTER" contentDisplay="RIGHT" layoutX="12.0" layoutY="8.0" mnemonicParsing="false" onAction="#onLogoutClick" prefHeight="6.0" prefWidth="92.0" style="-fx-background-color: #A3BAC3; -fx-font-size: 10; -fx-text-fill: white; -fx-background-radius: 5;" text="Log out">
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

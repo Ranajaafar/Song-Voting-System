@@ -1,0 +1,2 @@
+CREATE USER 'phpUser' IDENTIFIED BY 'USER_1235';
+GRANT ALL ON voting.* TO 'phpUser';

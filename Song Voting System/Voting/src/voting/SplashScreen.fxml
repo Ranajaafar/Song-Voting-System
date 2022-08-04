@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxWidth="-Infinity" prefHeight="369.0" prefWidth="529.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voting.SplashScreenController">
+   <children>
+      <Pane fx:id="splash_pane" prefHeight="369.0" prefWidth="541.0" stylesheets="@css/stylesheet.css">
+         <children>
+            <ProgressBar id="loadingBar" fx:id="loadingBar" layoutX="258.0" layoutY="329.0" prefHeight="18.0" prefWidth="245.0" />
+            <Pane fx:id="flash_Pane" layoutX="253.0" layoutY="136.0" prefHeight="158.0" prefWidth="255.0">
+               <children>
+                  <Label layoutX="5.0" layoutY="14.0" prefHeight="41.0" prefWidth="245.0" text="Vote For The Best Song" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="113.0" layoutY="49.0" prefHeight="41.0" prefWidth="29.0" text="Of" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="year2022" layoutX="74.0" layoutY="79.0" prefHeight="57.0" prefWidth="107.0" text="2022">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="48.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.7894737124443054" green="0.10599415004253387" blue="0.6755604147911072" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </Pane>
+            <Label fx:id="loading" layoutX="355.0" layoutY="306.0" stylesheets="@css/stylesheet.css" text="Loading..." textFill="WHITE" />
+         </children></Pane>
+   </children>
+</AnchorPane>

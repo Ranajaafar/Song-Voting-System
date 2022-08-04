@@ -1,0 +1,36 @@
+#splash_pane{
+    -fx-background-image: url(../images/microphone.jpeg);
+    -fx-background-size: contain; 
+    -fx-background-repeat: no-repeat;
+}
+
+#next_button, #login_button, #signup_button{
+    -fx-background-color: #541038;
+    -fx-background-radius:50px;
+}
+
+#next_button:hover, #login_button:hover, #signup_button:hover{
+    -fx-background-color: #c34b93;
+}
+
+#login_pane{
+    -fx-background-image: url(../images/p11.jpg);
+    -fx-background-size: cover; 
+    -fx-background-repeat: no-repeat;
+}
+
+#fields{
+    -fx-border-color:#A9D18E;
+    -fx-border-width:2px;
+}
+#a{
+    -fx-background-color: rgba(0,0,0,.1);
+}
+.sidebarItem{
+    -fx-background-color: #c34b93;
+}
+.sidebarItem:hover{
+    -fx-background-color: #541038;
+    -fx-border-color:black;
+    -fx-border-width: 0px 0px 0px 3px;
+}

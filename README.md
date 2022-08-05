@@ -37,8 +37,8 @@ Using Singleton and (Observer and Observable) patterns
 <div>
   <b> Result and Review Page:</b>
  </div>
-<img src="https://user-images.githubusercontent.com/110610925/183206707-a8b64f39-5769-4f73-92e1-5218a146feb2.png" width="45%" align="left" />
-<img src="https://user-images.githubusercontent.com/110610925/183206745-a09ce241-1c99-4420-a819-de8c2626c316.png" width="45%" />
+<img src="https://user-images.githubusercontent.com/110610925/183206745-a09ce241-1c99-4420-a819-de8c2626c316.png" width="45%" align="left" />
+<img src="https://user-images.githubusercontent.com/110610925/183206707-a8b64f39-5769-4f73-92e1-5218a146feb2.png" width="45%"  />
 
 <h2 align="center" >For Admin Side </h2>
 <div>

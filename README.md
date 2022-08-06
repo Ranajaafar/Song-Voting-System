@@ -5,6 +5,7 @@
 <img src="https://img.shields.io/badge/-Design%20Pattern-FF4F8B?logo=Design%20Pattern&logoColor=fff" />
 <img src="https://img.shields.io/badge/-MySQL-1572b6?logo=MySQL&logoColor=fff" />
 <img src="https://img.shields.io/badge/-Batch%20File-68A51C?logo=Batch%20File&logoColor=fff" />
+<img src="https://img.shields.io/badge/-CSS-1BA0D7?logo=css3&logoColor=fff" />
 
  <!-- <div align="left" float="none"> -->
 
